@@ -14,7 +14,6 @@
 .wizard-card {
   background-color: #ffffff;
   padding: 24px;
-  border-right: 1px solid #e0e0e0;
   background-image: url("src/assets/bg-sidebar-desktop.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,4 +24,19 @@
 .wizard-content {
   background-color: #ffffff;
   padding: 32px;
+}
+.wizard-main-content h3 {
+  font-weight: 100;
+  font-size: 16px;
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 50px;
+}
+.wizard-main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.wizard-main-content h2 {
+  font-size: 30px;
+  margin-bottom: 0;
 }

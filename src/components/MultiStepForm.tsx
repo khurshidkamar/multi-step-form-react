@@ -15,10 +15,26 @@ export default function MultiStepForm() {
             <StepIndicator currentStep={step} />
           </div>
           <div className="wizard-content">
-            {step === 1 && <PersonalInfoStep onNext={() => setStep(2)} />}
-            {step === 2 && <SelectPlanStep onNext={() => setStep(3)} />}
-            {step === 3 && <AddOnsStep onNext={() => setStep(4)} />}
-            {step === 4 && <SummaryStep />}
+            {step === 1 && (
+              <PersonalInfoStep currentStep={step} onNext={() => setStep(2)} />
+            )}
+            {step === 2 && (
+              <SelectPlanStep
+                currentStep={step}
+                onBack={() => setStep(1)}
+                onNext={() => setStep(3)}
+              />
+            )}
+            {step === 3 && (
+              <AddOnsStep
+                currentStep={step}
+                onBack={() => setStep(2)}
+                onNext={() => setStep(4)}
+              />
+            )}
+            {step === 4 && (
+              <SummaryStep currentStep={step} onBack={() => setStep(3)} />
+            )}
           </div>
         </div>
       </div>

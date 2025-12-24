@@ -12,7 +12,7 @@
 .step-number-grid {
   display: grid;
   grid-template-columns: 50px 1fr;
-  margin: 20px 0;
+  margin: 40px 0;
   color: white;
   text-transform: uppercase;
 }
@@ -38,9 +38,11 @@
 .step-label span:nth-child(1) {
   font-size: 14px;
   color: hsl(231, 11%, 63%);
+  font-weight: 400;
 }
 .step-label span:nth-child(2) {
   font-size: 16px;
   font-weight: 600;
-  margin-top: 5px;
+  margin-top: 2px;
+  font-weight: 500;
 }

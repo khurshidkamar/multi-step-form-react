@@ -1,0 +1,5 @@
+.grid-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal cards */
+  gap: 16px;
+}
