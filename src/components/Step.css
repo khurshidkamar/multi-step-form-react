@@ -1,0 +1,46 @@
+.step-number-active {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: black;
+  border: 1px solid white;
+  background-color: hsl(206, 94%, 87%);
+  display: flex;
+  align-items: center; /* vertical */
+  justify-content: center; /* horizontal */
+}
+.step-number-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  margin: 20px 0;
+  color: white;
+  text-transform: uppercase;
+}
+.step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background: transparent;
+  display: flex;
+  align-items: center; /* vertical */
+  justify-content: center; /* horizontal */
+  font-weight: 600;
+}
+
+.step-label {
+  display: flex;
+  flex-direction: column;
+}
+.step-label span {
+  display: block;
+}
+.step-label span:nth-child(1) {
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+.step-label span:nth-child(2) {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+}
