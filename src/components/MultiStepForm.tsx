@@ -6,6 +6,7 @@ import AddOnsStep from "./AddOnsStep";
 import SummaryStep from "./SummaryStep";
 import "./MultiStepForm.css";
 import type { WizardFormData } from "../data/FormData";
+import ThankYouStep from "./ThankYouStep";
 
 export default function MultiStepForm() {
   const [step, setStep] = useState(1);
@@ -56,8 +57,10 @@ export default function MultiStepForm() {
                 currentStep={step}
                 data={formData}
                 onBack={() => setStep(3)}
+                onNext={() => setStep(5)}
               />
             )}
+            {step === 5 && <ThankYouStep />}
           </div>
         </div>
       </div>

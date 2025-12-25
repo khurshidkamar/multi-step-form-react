@@ -1,0 +1,39 @@
+.summary-box {
+  background: #f8f9fe;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.main-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addon-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #6b7280;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  font-weight: 600;
+}
+
+.total-price {
+  color: #4f46e5;
+  font-size: 18px;
+}
+
+.change-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
