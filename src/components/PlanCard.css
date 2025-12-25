@@ -32,3 +32,25 @@
   color: hsl(231, 11%, 63%);
   font-size: 14px;
 }
+
+@media (max-width: 768px) {
+  .grid-card img {
+    width: 20%;
+  }
+  .grid-card {
+    flex-direction: row;
+    min-height: 90px;
+  }
+  .grid-card .card-text {
+    margin-left: 25px;
+  }
+  .grid-card .card-text span:nth-child(1) {
+    font-size: 20px;
+  }
+  .grid-card .card-text span:nth-child(2) {
+    font-size: 15px;
+  }
+  .grid-card .plan-offer {
+    margin-top: 1px;
+  }
+}

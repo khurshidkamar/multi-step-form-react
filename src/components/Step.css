@@ -46,3 +46,15 @@
   margin-top: 2px;
   font-weight: 500;
 }
+@media (max-width: 768px) {
+  .wizard-card .sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+
+  .step-label {
+    display: none;
+  }
+}

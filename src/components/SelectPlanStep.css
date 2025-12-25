@@ -3,3 +3,10 @@
   grid-template-columns: repeat(3, 1fr); /* 3 equal cards */
   gap: 16px;
 }
+@media (max-width: 768px) {
+  .grid-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

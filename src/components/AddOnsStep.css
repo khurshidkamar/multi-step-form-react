@@ -36,3 +36,17 @@
   font-size: 14px;
   margin: 0 0 0 auto;
 }
+
+@media (max-width: 768px) {
+  .addon-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    min-height: 63px;
+  }
+}
