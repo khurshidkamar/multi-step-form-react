@@ -10,12 +10,14 @@ export default function PersonalInfoStep({ currentStep, onNext }: Props) {
       <h3 className="title-caption">
         Please prove your name, email address, and phone number.
       </h3>
-      <InputBox textLabel={"Name"} placeHolder={"e.g. Stephen King"} />
-      <InputBox
-        textLabel={"Email Address"}
-        placeHolder={"e.g. stephenking@lorem.com"}
-      />
-      <InputBox textLabel={"Phone "} placeHolder={"e.g. Stephen King"} />
+      <form>
+        <InputBox textLabel={"Name"} placeHolder={"e.g. Stephen King"} />
+        <InputBox
+          textLabel={"Email Address"}
+          placeHolder={"e.g. stephenking@lorem.com"}
+        />
+        <InputBox textLabel={"Phone "} placeHolder={"e.g. Stephen King"} />
+      </form>
       <Footer currentStep={currentStep} onNext={onNext} />
     </div>
   );

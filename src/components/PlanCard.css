@@ -11,6 +11,7 @@
 }
 .grid-card.selected {
   border-color: hsl(213, 96%, 18%);
+  background-color: hsl(231, 100%, 99%);
 }
 .grid-card img {
   width: 45%;

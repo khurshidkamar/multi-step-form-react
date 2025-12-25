@@ -5,10 +5,21 @@ import BillingToggle from "./BillingToggle";
 import PlanCard from "./PlanCard";
 import { plans } from "../data/plans";
 
-type Props = { currentStep: number; onBack: () => void; onNext: () => void };
+type Props = {
+  currentStep: number;
+  onBack: () => void;
+  onNext: () => void;
+  isYearly: boolean;
+  setIsYearly: (value: boolean) => void;
+};
 
-export default function SelectPlanStep({ currentStep, onBack, onNext }: Props) {
-  const [isYearly, setIsYearly] = useState(false);
+export default function SelectPlanStep({
+  currentStep,
+  onBack,
+  onNext,
+  isYearly,
+  setIsYearly,
+}: Props) {
   const [selectedPlan, setSelectedPlan] = useState("arcade");
 
   return (

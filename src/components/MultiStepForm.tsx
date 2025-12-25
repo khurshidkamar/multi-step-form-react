@@ -7,6 +7,7 @@ import SummaryStep from "./SummaryStep";
 import "./MultiStepForm.css";
 export default function MultiStepForm() {
   const [step, setStep] = useState(1);
+  const [isYearly, setIsYearly] = useState(false);
   return (
     <>
       <div className="form-container">
@@ -23,6 +24,8 @@ export default function MultiStepForm() {
                 currentStep={step}
                 onBack={() => setStep(1)}
                 onNext={() => setStep(3)}
+                isYearly={isYearly}
+                setIsYearly={setIsYearly}
               />
             )}
             {step === 3 && (
@@ -30,6 +33,7 @@ export default function MultiStepForm() {
                 currentStep={step}
                 onBack={() => setStep(2)}
                 onNext={() => setStep(4)}
+                isYearly={isYearly}
               />
             )}
             {step === 4 && (

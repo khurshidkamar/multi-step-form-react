@@ -1,0 +1,38 @@
+.formcheck {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.addon-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.addon-item:hover {
+  background-color: #f8f9fe;
+}
+.addon-item:has(input:checked) {
+  background-color: #f8f9fe;
+  border-color: #02295a;
+}
+.addon-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.addon-description {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.addon-price {
+  font-size: 14px;
+  margin: 0 0 0 auto;
+}
