@@ -22,8 +22,6 @@ export default function SelectPlanStep({
   onBack,
   onNext,
 }: Props) {
-  const [selectedPlan, setSelectedPlan] = useState("arcade");
-
   return (
     <div className="wizard-main-content">
       <h2 className="wizard-title">Select your plan</h2>
@@ -42,8 +40,13 @@ export default function SelectPlanStep({
             }
             icon={plan.icon}
             isYearly={data.isYearly}
-            selected={selectedPlan === plan.id}
-            onSelect={() => setSelectedPlan(plan.id)}
+            selected={data.plan === plan.id}
+            onSelect={() =>
+              setData((prev) => ({
+                ...prev,
+                plan: plan.id,
+              }))
+            }
           />
         ))}
       </div>
