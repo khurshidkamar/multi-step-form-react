@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Footer from "./Footer";
 import "./SelectPlanStep.css";
 import BillingToggle from "./BillingToggle";
