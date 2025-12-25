@@ -1,5 +1,4 @@
 .next-btn {
-  float: right;
   background-color: hsl(213, 96%, 18%);
   color: #fff;
   width: 130px;
@@ -15,10 +14,11 @@
   cursor: pointer;
 }
 
-.wizard-main-content footer {
+.wizard-main-content .footer {
   margin-top: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .back-button {

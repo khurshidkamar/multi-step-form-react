@@ -1,13 +1,29 @@
 type Props = {
-  key: string;
+  id: string;
   title: string;
   description: string;
   price: string;
+  checked: boolean;
+  onToggle: (id: string) => void;
 };
-export default function CheckBox({ key, title, description, price }: Props) {
+
+export default function CheckBox({
+  id,
+  title,
+  description,
+  price,
+  checked,
+  onToggle,
+}: Props) {
   return (
-    <label htmlFor={key} className="addon-item">
-      <input type="checkbox" id="checkservice1" className="addon-checkbox" />
+    <label className={`addon-item ${checked ? "selected" : ""}`}>
+      <input
+        type="checkbox"
+        id={id}
+        className="addon-checkbox"
+        checked={checked}
+        onChange={() => onToggle(id)}
+      />
 
       <div className="addon-text">
         <span className="addon-checkbox-label">{title}</span>

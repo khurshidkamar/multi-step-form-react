@@ -5,20 +5,22 @@ import BillingToggle from "./BillingToggle";
 import PlanCard from "./PlanCard";
 import { plans } from "../data/plans";
 
+import type { WizardFormData } from "../data/FormData";
+
 type Props = {
   currentStep: number;
+  data: WizardFormData;
+  setData: React.Dispatch<React.SetStateAction<WizardFormData>>;
   onBack: () => void;
   onNext: () => void;
-  isYearly: boolean;
-  setIsYearly: (value: boolean) => void;
 };
 
 export default function SelectPlanStep({
   currentStep,
+  data,
+  setData,
   onBack,
   onNext,
-  isYearly,
-  setIsYearly,
 }: Props) {
   const [selectedPlan, setSelectedPlan] = useState("arcade");
 
@@ -34,16 +36,26 @@ export default function SelectPlanStep({
             key={plan.id}
             title={plan.title}
             price={
-              !isYearly ? `$${plan.monthlyPrice}/mo` : `$${plan.yearlyPrice}/yr`
+              !data.isYearly
+                ? `$${plan.monthlyPrice}/mo`
+                : `$${plan.yearlyPrice}/yr`
             }
             icon={plan.icon}
-            isYearly={isYearly}
+            isYearly={data.isYearly}
             selected={selectedPlan === plan.id}
             onSelect={() => setSelectedPlan(plan.id)}
           />
         ))}
       </div>
-      <BillingToggle isYearly={isYearly} onChange={setIsYearly} />
+      <BillingToggle
+        isYearly={data.isYearly}
+        onChange={(value: boolean) =>
+          setData((prev) => ({
+            ...prev,
+            isYearly: value,
+          }))
+        }
+      />
       <Footer currentStep={currentStep} onBack={onBack} onNext={onNext} />
     </div>
   );

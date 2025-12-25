@@ -6,15 +6,25 @@
 }
 .input-box label {
   font-size: 14px;
+  margin-top: 20px;
 }
 
 .input-box input {
   border-radius: 10px;
   height: 25px;
-  margin-bottom: 20px;
+
   padding: 5px;
   border: 1px solid grey;
 }
 .input-box input:focus {
   outline: none;
+}
+.input-box input.error {
+  border: 1px solid #ef4444;
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
 }
